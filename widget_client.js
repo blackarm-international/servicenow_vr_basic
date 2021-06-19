@@ -166,11 +166,6 @@ api.controller=function() {
         myCurrentSession.removeEventListener( 'end', onSessionEnded );
         myCurrentSession = null;
     }
-
-    function checkVr(){
-        console.clear();
-        console.log(navigator.xr)
-    }
 	
     var serverLink = this;
     let myCurrentSession = null;
@@ -186,9 +181,8 @@ api.controller=function() {
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
     document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     document.addEventListener( 'mouseup', onDocumentMouseUp, false );
-    document.getElementById('vr').addEventListener( 'click', vr, false );
+    document.getElementById( 'vr' ).addEventListener( 'click', vr, false );
     window.addEventListener( 'resize', onWindowResize );
-    checkVr();
     init();
     buildScene();
     animate();
